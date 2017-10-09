@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Codaisseurup</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,700" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -11,11 +12,20 @@
   <body>
     <%= render "shared/navbar" %>
 
+
       <!-- Notifications from Devise Gem -->
-         <p class="notice"><%= notice %></p>
-         <p class="alert"><%= alert %></p>
-         <div class="container">
+      <div class="row">
+        <div class="col-xs-12 all_notification text-center">
+            <p class="notice text-center"><%= notice %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 all_notification text-center">
+          <p class="alert"><%= alert %></p>
+        </div>
+      </div>
+
            <%= yield %>
-         </div>
+
   </body>
 </html>
