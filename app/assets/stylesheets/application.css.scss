@@ -6,9 +6,9 @@
 }
 
 nav {
-  background: none !important;
   border: none !important;
-  background-color: linear-gradient(to right, rgba(0,0,0,0), rgba(255,0,0,0.5)); /* Standard syntax (must be last) */
+  background-color: #262626 !important; /* Standard syntax (must be last) */
+  padding-bottom: 10px;
 }
 
 .all_notification {

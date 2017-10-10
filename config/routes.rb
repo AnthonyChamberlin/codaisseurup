@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: [:show]
-  resources :event, except: [:destroy]
+  resources :events, except: [:destroy]
 end
