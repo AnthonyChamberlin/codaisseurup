@@ -203,3 +203,18 @@ nav {
   border-radius: 15px;
   margin-right: 40px;
 }
+
+.footer {
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #272828;
+}
+
+.footer span {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+}
