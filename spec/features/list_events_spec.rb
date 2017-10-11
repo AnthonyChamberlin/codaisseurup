@@ -1,4 +1,8 @@
 require 'rails_helper'
+  describe "Current User viewing the list of their Events" do
+
+
+  end
 
  describe "Current user viewing the list of events" do
    before { login_as user }
@@ -20,7 +24,7 @@ require 'rails_helper'
      expect(page).to have_text("Event Name 3")
    end
 
-   it "does not show other users events"
+   it "does not show other users events" do
      visit events_url
 
      expect(page).not_to have_text("Another users event")
