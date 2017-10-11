@@ -1,11 +1,13 @@
-<div class="panel panel-primary">
-  <div class="panel-heading"><%= @event.name %></div>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading"><%= @event.name %></div>
 
-  <h4>Themes</h4>
-<% @categories.each do |cat| %>
-  <span class="label label-success"><%= cat.name %></span>
-<% end %>
+    <h4>Themes</h4>
+  <% @categories.each do |cat| %>
+    <span class="label label-success"><%= cat.name %></span>
+  <% end %>
 
-  </div>
+    </div>
 
-<%= link_to "Back", events_path, class: "btn btn-default" %>
+  <%= link_to "Back", events_path, class: "btn btn-default" %>
+</div>

@@ -20,8 +20,8 @@ event = Event.create!({
   capacity: 2000,
   includes_food: true,
   includes_drink: true,
-  starts_at: 04112017,
-  ends_at: 04112017,
+  starts_at: DateTime.parse("10/11/2009 17:00"),
+  ends_at: DateTime.parse("09/01/2009 17:00"),
   active: true,
   user: ant,
   categories: [fun_and_games, social_and_drinks]
