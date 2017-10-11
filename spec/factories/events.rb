@@ -19,4 +19,5 @@ FactoryGirl.define do
       active false
     end
   end
+  
 end
