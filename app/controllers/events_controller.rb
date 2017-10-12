@@ -23,7 +23,7 @@ class EventsController < ApplicationController
       image_params.each do |image|
       @event.photos.create(image: image)
     end
-      redirect_to @event, notice: "Event Created!"
+      redirect_to edit_event_path(@event), notice: "Event Created!"
     else
       render :new
     end
@@ -40,23 +40,16 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
-    image_params.each do |image|
+      image_params.each do |image|
       @event.photos.create(image: image)
     end
-      redirect_to @event, notice: "Event Updated"
+      redirect_to edit_event_path(@event), notice: "Event Updated"
     else
       render :edit
     end
   end
 
   private
-
-  def image_params
-      # Turnary Operators are what Arno dislikes
-        #params[:images].present? ? params.require(:images) : []
-     # Write it like this
-     return params[:image] if params[:image].present?
-  end
 
   def set_event
     @event = Event.find(params[:id])
@@ -68,5 +61,10 @@ class EventsController < ApplicationController
       .permit(
         :name, :description, :location, :price, :capacity, :includes_food, :includes_drink, :starts_at, :ends_at, :active, category_ids: []
       )
+  end
+
+  def image_params
+      # Turnary Operators are what Arno dislikes
+        params[:images].present? ? params.require(:images) : []
   end
 end

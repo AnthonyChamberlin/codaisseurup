@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container show_container">
   <div class="panel panel-primary">
     <div class="panel-heading"><%= @event.name %></div>
 
@@ -9,7 +9,7 @@
     <!-- Photos -->
     <h4>Photos</h4>
     <% @event.photos.each do |photo| %>
-      <%= image_tag photo.image %>
+      <%= image_tag photo.image.thumbnail %>
     <% end %>
   </div>
 

@@ -1,5 +1,6 @@
 Photo.destroy_all
 Category.destroy_all
+Event.destroy_all
 User.destroy_all
 
 music = Category.create(name: "Music")
@@ -29,7 +30,7 @@ event_1 = Event.create!({
   })
 
 event_2 = Event.create!({
-  name: "Live Music Jam, anybody is welcome!",
+  name: "Live Music Jam!",
   description: "Bring your own drinks! :)",
   location: "Amsterdam",
   price: 5,
@@ -44,7 +45,7 @@ event_2 = Event.create!({
   })
 
 event_3 = Event.create!({
-  name: "Football Games: 5-a-Side Tournament",
+  name: "Football: 5-a-Side",
   description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
   location: "Amsterdam",
   price: 5,
@@ -59,7 +60,7 @@ event_3 = Event.create!({
   })
 
 event_4 = Event.create!({
-  name: "Techno Party, Brace Yourself.",
+  name: "Pleinvrees Party",
   description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
   location: "Amsterdam",
   price: 45,
