@@ -9,3 +9,12 @@ RSpec.describe Event, type: :model do
     it { is_expected.to validate_presence_of(:location) }
   end
 end
+
+describe "association with user" do
+  let(:user) { create :user }
+
+  it "belongs to a user" do
+    event = user.events.build(name: "Shared")
+    expect(event.user).to eq(user)
+  end
+end
