@@ -1,3 +1,4 @@
+Photo.destroy_all
 Category.destroy_all
 User.destroy_all
 
@@ -12,7 +13,7 @@ davey = User.create(email: "davey@gmail.com", password: "123456")
 sandra = User.create(email: "sandra@gmail.com", password: "123456")
 sam = User.create(email: "sam@gmail.com", password: "123456")
 
-event = Event.create!({
+event_1 = Event.create!({
   name: "Party in Centraal!",
   description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
   location: "Amsterdam",
@@ -27,7 +28,7 @@ event = Event.create!({
   categories: [fun_and_games, social_and_drinks]
   })
 
-event = Event.create!({
+event_2 = Event.create!({
   name: "Live Music Jam, anybody is welcome!",
   description: "Bring your own drinks! :)",
   location: "Amsterdam",
@@ -42,7 +43,7 @@ event = Event.create!({
   categories: [music, live_music]
   })
 
-event = Event.create!({
+event_3 = Event.create!({
   name: "Football Games: 5-a-Side Tournament",
   description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
   location: "Amsterdam",
@@ -57,7 +58,7 @@ event = Event.create!({
   categories: [sport]
   })
 
-event = Event.create!({
+event_4 = Event.create!({
   name: "Techno Party, Brace Yourself.",
   description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
   location: "Amsterdam",
@@ -71,3 +72,7 @@ event = Event.create!({
   user: sam,
   categories: [music, live_music, fun_and_games]
   })
+
+photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dbe5xk4jk/image/upload/v1507801885/pexels-photo-167605_yhpzsd.jpg", event: event_1)
+photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dbe5xk4jk/image/upload/v1507801751/SW_Dylan_2BRives_u9e98u.jpg", event: event_2)
+photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dbe5xk4jk/image/upload/v1507801671/pexels-photo-433452_by4i6t.jpg", event: event_3)
