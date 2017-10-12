@@ -3,15 +3,15 @@
     <div class="panel-heading"><%= @event.name %></div>
 
     <h4>Themes</h4>
-  <% @categories.each do |cat| %>
+    <% @categories.each do |cat| %>
     <span class="label label-success"><%= cat.name %></span>
-  <% end %>
-  <!-- Photos -->
-<h4>Photos</h4>
-<% @event.photos.each do |photo| %>
-<%= image_tag photo.image %>
-<% end %>
-    </div>
+    <% end %>
+    <!-- Photos -->
+    <h4>Photos</h4>
+    <% @event.photos.each do |photo| %>
+      <%= image_tag photo.image %>
+    <% end %>
+  </div>
 
   <%= link_to "Back", events_path, class: "btn btn-default" %>
 </div>

@@ -8,6 +8,7 @@ class EventsController < ApplicationController
 
   def show
     @categories = @event.categories
+    @photos = @event.photos
   end
 
   def new
@@ -19,6 +20,9 @@ class EventsController < ApplicationController
     @event = current_user.events.build(event_params)
 
     if @event.save
+      image_params.each do |image|
+      @event.photos.create(image: image)
+    end
       redirect_to @event, notice: "Event Created!"
     else
       render :new
@@ -27,10 +31,18 @@ class EventsController < ApplicationController
 
   def edit
     @categories = Category.all
+    if current_user.id == @event.user.id
+      @photos = @event.photos
+    else
+      redirect_to root_path, notice: "You dont have permission to do that."
+    end
   end
 
   def update
     if @event.update(event_params)
+    image_params.each do |image|
+      @event.photos.create(image: image)
+    end
       redirect_to @event, notice: "Event Updated"
     else
       render :edit
@@ -38,6 +50,13 @@ class EventsController < ApplicationController
   end
 
   private
+
+  def image_params
+      # Turnary Operators are what Arno dislikes
+        #params[:images].present? ? params.require(:images) : []
+     # Write it like this
+     return params[:image] if params[:image].present?
+  end
 
   def set_event
     @event = Event.find(params[:id])

@@ -167,6 +167,32 @@ nav {
   width: 250px;
 }
 
+
+
+.event_cards {
+  background: linear-gradient(to bottom right, #651d6d, #1e6d59); /* Standard syntax */
+  height: 200px;
+  color: #fff;
+  padding-top: 30px;
+  margin-bottom: 0px;
+  border-radius: 15px;
+  border: 5px solid #fff;
+}
+
+.posted_time {
+  background-color: transparent;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.details_row {
+  margin-top: 10px;
+}
+
 .card-text {
   font-size: 18px;
 }
