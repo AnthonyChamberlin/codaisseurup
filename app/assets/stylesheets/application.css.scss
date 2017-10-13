@@ -69,7 +69,7 @@ nav {
 
 .carousel {
   width: 100%;
-  height: 500px !important;
+  height: 640px !important;
   margin-bottom: 0px;
 }
 
@@ -126,7 +126,7 @@ nav {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
+  height: 640px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -172,6 +172,8 @@ nav {
   color: #88319b;
   text-decoration: none;
 }
+
+
 
 .inner_card {
   background: #fff;
