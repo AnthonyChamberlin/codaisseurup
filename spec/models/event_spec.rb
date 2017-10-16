@@ -33,5 +33,17 @@ describe "association with registration" do
   end
 end
 
+  describe "order by name" do
+    let!(:event_1) { create :event, name: "Crew" }
+    let!(:event_2) { create :event, name: "Ballet" }
+    let!(:event_3) { create :event, name: "Aerobics" }
+
+
+    it "returns event name in alphabetical order" do
+      expect(Event.order_by_name).to eq([event_1, event_2, event_3])
+    end
+    
+  end
+
 
 end

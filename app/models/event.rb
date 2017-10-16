@@ -9,4 +9,12 @@ class Event < ApplicationRecord
   validates :name,        presence: true, length: { maximum: 100 }
   validates :description, presence: true, length: { maximum: 500 }
   validates :location,    presence: true
+
+  scope :published, -> { where(active: true) }
+
+  def self.order_by_name
+    order(name: :asc)
+  end
+
+  
 end
