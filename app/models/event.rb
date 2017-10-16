@@ -16,5 +16,13 @@ class Event < ApplicationRecord
     order(name: :asc)
   end
 
-
+  def available?(checkin, checkout)
+    registrations.each do |registration|
+      if (registration.starts_at <= checkout) && (registration.ends_at >= checkin)
+        return false
+      end
+    end
+    
+    true
+  end
 end

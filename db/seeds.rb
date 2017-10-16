@@ -71,4 +71,5 @@ photo1 = Photo.create!(remote_image_url: 'http://res.cloudinary.com/dbe5xk4jk/im
 photo2 = Photo.create!(remote_image_url: 'http://res.cloudinary.com/dbe5xk4jk/image/upload/v1507801751/SW_Dylan_2BRives_u9e98u.jpg', event: event_2)
 photo3 = Photo.create!(remote_image_url: 'http://res.cloudinary.com/dbe5xk4jk/image/upload/v1507801671/pexels-photo-433452_by4i6t.jpg', event: event_3)
 
-Registration.create!( event: event_1, user: ant, status: "Registered", price: event_1.price, guests_count: 3 )
+Registration.create!(event: event_1, user: ant, price: 50, starts_at: 10.days.from_now, ends_at: 12.days.from_now)
+Registration.create!(event: event_2, user: ant, price: 50, starts_at: 10.days.from_now, ends_at: 12.days.from_now)
