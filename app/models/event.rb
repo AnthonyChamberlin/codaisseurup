@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   has_and_belongs_to_many :categories
   has_many :photos
@@ -16,5 +16,5 @@ class Event < ApplicationRecord
     order(name: :asc)
   end
 
-  
+
 end
